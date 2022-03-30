@@ -1,119 +1,85 @@
-.main{
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    padding: 90px 0 90px 0;
-    background-color: rgb(252, 252, 252);
+.navbar {
+	height: 110px;
+	background: linear-gradient(90.32deg, #3e1f92 0%, #fa949d 124.75%);
+}
+.logo {
+	position: relative;
+	width: 56.57px;
+	height: 56.57px;
+
+	background: #fa949d;
+	border-radius: 6px;
+	transform: rotate(-45deg);
+}
+.call-icon {
+	position: absolute;
+	left: 2.65%;
+	top: 18px;
+	margin-top: 15px;
+}
+.top-header {
+	position: relative;
+	width: 207px;
+	height: 44px;
+
+	font-family: 'Exo 2';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 48px;
+
+	color: #fa949d !important;
+}
+.heading {
+	position: absolute;
+	width: 270px;
+	height: 70px;
+	left: 50px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+
+	font-size: 60px;
+	line-height: 90px;
+
+	color: #000000;
+}
+.user-entry {
+	margin-top: 1px;
+	padding: 1px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.info-group {
+	width: 240px;
+}
+.column-label {
+	margin-top: 20px;
+	padding: 15px;
+	display: flex;
+	justify-content: space-evenly;
+}
+.title-label {
+	display: flex;
+	width: 155px;
+	height: 23px;
+
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 23px;
+
+	color: #000000;
 }
 
-.sub-main1{
-    display: flex;
-    justify-content: center;
-    height: 550px;
-    width:80%;
-    box-shadow: 12px 12px 13px 12px rgb(207, 207, 207);
-    padding-top: 30px;
-    border-radius: 60px;
-    background-color: white;
-}
+.label-box {
+	margin-top: 5px;
+	width: 155px;
+	height: 40px;
 
-form {
-    /* Center the form on the page */
-    margin: auto;
-    width: 850px;
-    /* Form outline */
-    
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 20px;
-    text-align: center;
-    justify-content: center;
-    font-size: large;
-   
-    
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  form li + li {
-    margin-top: 1em;
-  }
-  
-  label {
-    /* Uniform size & alignment */
-    display: inline-block;
-    width: 110px;
-    text-align: right;
-  }
-  
-  input,
-  textarea {
-    /* To make sure that all text fields have the same font settings
-       By default, textareas have a monospace font */
-    font: 1em sans-serif;
-  
-    /* Uniform text field size */
-    width: 300px;
-    box-sizing: border-box;
-  
-    /* Match form field borders */
-    border: 1px solid #999;
-  }
-  
-  input:focus,
-  textarea:focus {
-    /* Additional highlight for focused elements */
-    border-color: #000;
-  }
-  
-  textarea {
-    /* Align multiline text fields with their labels */
-    vertical-align: top;
-  
-    /* Provide space to type some text */
-    height: 5em;
-  }
-  
-  .button {
-    /* Align buttons with the text fields */
-    padding-left: 90px; /* same size as the label elements */
-  }
-  
-  button {
-    /* This extra margin represent roughly the same space as the space
-       between the labels and their text fields */
-    margin-left: .5em;
-  }
-
-  .input1{
-    width: 300px;
-    height: 30px;
-    border-radius: 60px;
-    box-shadow: inset 0px 0px 25px 0px #888;
-    border: none;
-    outline: none;
-    background-color: #fff;
-    padding-left: 70px;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-.button1{
-    width: 380px;
-    height: 50px;
-    border-radius: 60px;
-    background-color: #b103fc;
-    color: white;
-    font-size: 25px;
-    border: none;
-}
-
-.search-contact{
-  text-align: center;
- 
-  
-  
+	background: #e8eaeb !important;
+	border-radius: 12px;
 }

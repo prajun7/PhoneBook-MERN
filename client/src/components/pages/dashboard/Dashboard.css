@@ -1,0 +1,113 @@
+.navbar {
+	height: 110px;
+	background: linear-gradient(90.32deg, #3e1f92 0%, #fa949d 124.75%);
+}
+.logo {
+	position: relative;
+	width: 56.57px;
+	height: 56.57px;
+
+	background: #fa949d;
+	border-radius: 6px;
+	transform: rotate(-45deg);
+}
+.call-icon {
+	position: absolute;
+	margin-top: 15px;
+	left: 2.65%;
+
+	right: 93.11%;
+}
+.top-header {
+	position: relative;
+	width: 207px;
+	height: 30px;
+
+	font-family: 'Exo 2';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 48px;
+
+	color: #fa949d !important;
+}
+.nav-title {
+	padding: 18px;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 60px;
+	line-height: 70px;
+	color: #000000;
+}
+.top-container {
+	margin: 1px;
+	padding: 1px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+
+	width: auto;
+	height: auto;
+}
+
+.buttons {
+	width: 160px;
+	height: 87px;
+	background: #ac3131 !important;
+	color: #ffffff !important;
+
+	border-radius: 13px;
+}
+
+.bottom-container {
+	width: 100%;
+	height: 50vh;
+	margin: 20px;
+	padding: 10px;
+}
+
+.upper-row1 {
+	height: 25vh;
+}
+.upper-row1 Col {
+	background: #e6e6e6;
+	border-radius: 34px;
+}
+
+.profession-card {
+	width: 260px;
+	height: 210px;
+	background: #e6e6e6 !important;
+	border-radius: 34px !important;
+}
+.card-body {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.title-name {
+	padding: 15px;
+	font-family: 'Exo 2';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 48px;
+	/* identical to box height */
+
+	color: #000000;
+}
+.profession-number {
+	padding: 2px;
+	font-family: 'Exo 2';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 48px;
+	/* identical to box height */
+	display: flex;
+	align-items: center;
+
+	color: #000000;
+}
