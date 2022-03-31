@@ -1,8 +1,8 @@
-const express = require("express");
+const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const cors = require('cors');    //Need to add this cors, then only we will be able to 
-                                // fetch data from the below port in react
+const cors = require('cors'); //Need to add this cors, then only we will be able to
+// fetch data from the below port in react
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -18,20 +18,21 @@ app.use(express.json());
 app.use(cors());
 
 //Route Middlewares
-app.use('/auth',signUp);
-app.use('/auth',logIn);
-app.use('/contact',contact);
-app.use('/search',search);
+app.use('/auth', signUp);
+app.use('/auth', logIn);
+app.use('/contact', contact);
+app.use('/search', search);
 
 //Database connection
 mongoose.connect(
-    process.env.DB_CONNECTION,
-    {useNewUrlParser : true},
-    () => console.log("Connected to DB!")
+	process.env.DB_CONNECTION,
+	{ useNewUrlParser: true },
+
+	() => console.log('Connected to DB!')
 );
 
-app.get('/', (req,res) =>{
-    res.send("Hello world");
+app.get('/', (req, res) => {
+	res.send('Hello world');
 });
 
-app.listen(5000,() => console.log("Server running on port 5000"));
+app.listen(5000, () => console.log('Server running on port 5000'));
