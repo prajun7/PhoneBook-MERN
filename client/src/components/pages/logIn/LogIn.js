@@ -11,18 +11,8 @@ import React, { useContext, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { UserContext } from '../../../contexts/UserContext';
 import './LogIn.css';
-import profile from './image/a.png';
-import emailSign from './image/email.jpg';
-import pass from './image/pass.png';
-import {
-	Navbar,
-	Nav,
-	Container,
-	Form,
-	Button,
-	InputGroup,
-	Card,
-} from 'react-bootstrap';
+
+import { Navbar, Nav, Container, Form, InputGroup } from 'react-bootstrap';
 // This will be the LogIn Page,
 // User will be able to LogIn from this page, if they have an account
 
