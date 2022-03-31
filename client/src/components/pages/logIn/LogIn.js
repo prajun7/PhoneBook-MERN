@@ -12,16 +12,14 @@ import { Link, useHistory } from 'react-router-dom';
 import { UserContext } from '../../../contexts/UserContext';
 import './LogIn.css';
 
-import {
-	Navbar,
-	Nav,
-	Container,
-	Form,
-	Button,
-	InputGroup,
-	Card,
-} from 'react-bootstrap';
+import { Navbar, Container, Form, Button, InputGroup } from 'react-bootstrap';
 
+const navStyle = {
+	color: 'blue',
+
+	textDecoration: 'none', // Removing the text-decoration(underline) from the links
+	// In Javascript while writing CSS we need to change text-decoration to textDecoration
+};
 // This will be the LogIn Page,
 // User will be able to LogIn from this page, if they have an account
 
@@ -94,7 +92,7 @@ function LogIn() {
 		<main>
 			<section>
 				<Navbar className='navbar-login'>
-					<nav>
+					{/* <nav>
 						<svg
 							className='logo'
 							width='76'
@@ -126,10 +124,12 @@ function LogIn() {
 								fill='#3E1F92'
 							/>
 						</svg>
+					</nav> */}
+					<nav>
+						<Link className='top-header' to='/'>
+							Phonebook
+						</Link>
 					</nav>
-					<Nav.Link className='top-header' href='/'>
-						Phonebook
-					</Nav.Link>
 				</Navbar>
 			</section>
 			{/* signin section */}
@@ -139,7 +139,7 @@ function LogIn() {
 					<div>{error && <div className='error-message'>{error}</div>}</div>
 					<Form.Group className='form-group'>
 						<InputGroup>
-							<div className='inner-icon'>
+							{/* <div className='inner-icon'>
 								<svg
 									width='22'
 									height='18'
@@ -163,7 +163,7 @@ function LogIn() {
 										stroke-linejoin='round'
 									/>
 								</svg>
-							</div>
+							</div> */}
 							<Form.Control
 								className='input'
 								type='email'
@@ -176,7 +176,7 @@ function LogIn() {
 					</Form.Group>
 					<Form.Group className='form-group'>
 						<InputGroup>
-							<div className='inner-icon'>
+							{/* <div className='inner-icon'>
 								<svg
 									width='20'
 									height='22'
@@ -200,7 +200,7 @@ function LogIn() {
 										stroke-linejoin='round'
 									/>
 								</svg>
-							</div>
+							</div> */}
 							<Form.Control
 								className='input'
 								type='password'
@@ -210,11 +210,11 @@ function LogIn() {
 						</InputGroup>
 					</Form.Group>
 					<Form.Group className='button-group'>
-						<Nav className='forgot-password'>
-							<Nav.Link className='link' href='/forgotpassword'>
+						<nav className='forgot-password'>
+							<Link className='link' to='/forgotpassword'>
 								Forgot your Password?
-							</Nav.Link>
-						</Nav>
+							</Link>
+						</nav>
 					</Form.Group>
 					<Form.Group className='button-group'>
 						<Button className='button2' onClick={handleSubmitLogIn}>
@@ -223,7 +223,7 @@ function LogIn() {
 					</Form.Group>
 					<Form.Group className='bottom-group'>
 						<Form.Text>New to Phonebook?</Form.Text>
-						<Nav.Link href='/signup'>Sign up</Nav.Link>
+						<Link to='/signup'>Sign up</Link>
 					</Form.Group>
 				</Form>
 			</Container>

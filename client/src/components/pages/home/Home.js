@@ -6,7 +6,11 @@ import phone from '../dashboard/phone.jpeg';
 import '../home/Home.css';
 // This will be the Home Page,
 // User will be able to SigUp and LogIn from this page, if they don't have an account
+const navStyle = {
+	color: 'blue',
 
+	textDecoration: 'none',
+};
 function Home() {
 	// Getting user info from the context
 	const { loggedIn, setLoggedIn, setUser } = useContext(UserContext);
@@ -22,7 +26,7 @@ function Home() {
 		<main className='main-div' style={{ backgroundImage: `url(${phone})` }}>
 			<section>
 				<Navbar className='navbar'>
-					<nav>
+					{/* <nav>
 						<svg
 							className='logo'
 							width='76'
@@ -54,10 +58,12 @@ function Home() {
 								fill='#3E1F92'
 							/>
 						</svg>
+					</nav> */}
+					<nav>
+						<Link className='top-header' to='/'>
+							Phonebook
+						</Link>
 					</nav>
-					<Nav.Link className='top-header' href='/'>
-						Phonebook
-					</Nav.Link>
 				</Navbar>
 				<h1 className='nav-title'>Homepage</h1>
 			</section>
@@ -65,9 +71,13 @@ function Home() {
 				//True
 				<Container>
 					<Card>
-						<Nav.Link href='/' className='nav-links' onClick={LoggOutButton}>
+						<Link
+							to='/'
+							style={navStyle}
+							className='nav-links'
+							onClick={LoggOutButton}>
 							LogOut
-						</Nav.Link>
+						</Link>
 					</Card>
 				</Container>
 			) : (
@@ -75,10 +85,14 @@ function Home() {
 				<Container className='bottom'>
 					<Row>
 						<Col>
-							<Nav.Link href='/login'>LogIn</Nav.Link>
+							<Link style={navStyle} className='nav-links' to='/login'>
+								LogIn
+							</Link>
 						</Col>
 						<Col>
-							<Nav.Link href='/signup'>SignUp</Nav.Link>
+							<Link style={navStyle} className='nav-links' to='/signup'>
+								SignUp
+							</Link>
 						</Col>
 					</Row>
 				</Container>

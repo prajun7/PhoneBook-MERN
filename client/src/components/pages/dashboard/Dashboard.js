@@ -2,15 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import { UserContext } from '../../../contexts/UserContext';
 import { Link } from 'react-router-dom';
 
-import {
-	Card,
-	Button,
-	Row,
-	Container,
-	Navbar,
-	Col,
-	Nav,
-} from 'react-bootstrap';
+import { Card, Row, Container, Navbar, Col } from 'react-bootstrap';
 import '../dashboard/Dashboard.css';
 // This will be the Dashboard Page,
 // User will be able to see the the number of their contacts
@@ -21,7 +13,12 @@ const API_BASE = 'http://localhost:5000';
     This removes the underline and makes the text blue from the links
     Used below in Forgot Password? and Need an Account?
   */
+const navStyle = {
+	color: 'blue',
 
+	textDecoration: 'none', // Removing the text-decoration(underline) from the links
+	// In Javascript while writing CSS we need to change text-decoration to textDecoration
+};
 function Dashboard() {
 	const { loggedIn, user } = useContext(UserContext);
 
@@ -87,7 +84,7 @@ function Dashboard() {
 		<main>
 			<section>
 				<Navbar className='navbar'>
-					<nav>
+					{/* <nav>
 						<svg
 							className='logo'
 							width='76'
@@ -119,26 +116,28 @@ function Dashboard() {
 								fill='#3E1F92'
 							/>
 						</svg>
+					</nav> */}
+					<nav>
+						<Link className='top-header' to='/'>
+							Phonebook
+						</Link>
 					</nav>
-					<Nav.Link className='top-header' href='/'>
-						Phonebook
-					</Nav.Link>
 				</Navbar>
 				<h1 className='nav-title'>Dashboard</h1>
 			</section>
 			{/* button container */}
 			<Container fluid className='top-container'>
-				<Nav className='buttons'>
-					<Nav.Link className='links' href='/userentry'>
+				<nav className='buttons'>
+					<Link style={navStyle} className='links' to='/userentry'>
 						Add Contacts
-					</Nav.Link>
-				</Nav>
+					</Link>
+				</nav>
 
-				<Nav className='buttons'>
-					<Nav.Link className='links' href='/searchcontact'>
+				<nav className='buttons'>
+					<Link style={navStyle} className='links' to='/searchcontact'>
 						Search Contact
-					</Nav.Link>
-				</Nav>
+					</Link>
+				</nav>
 			</Container>
 
 			<Container fluid className='bottom-container'>
@@ -146,7 +145,7 @@ function Dashboard() {
 					<Col>
 						<Card className='profession-card'>
 							<Card.Body className='card-body'>
-								<div>
+								{/* <div>
 									<svg
 										width='81'
 										height='72'
@@ -164,7 +163,7 @@ function Dashboard() {
 											fill='black'
 										/>
 									</svg>
-								</div>
+								</div> */}
 								<Card.Title className='title-name'>Teacher</Card.Title>
 								<Card.Subtitle className='profession-number'>
 									{teacherCount}
@@ -175,7 +174,7 @@ function Dashboard() {
 					<Col>
 						<Card className='profession-card'>
 							<Card.Body className='card-body'>
-								<svg
+								{/* <svg
 									width='72'
 									height='72'
 									viewBox='0 0 72 72'
@@ -185,7 +184,7 @@ function Dashboard() {
 										d='M26.4001 33.5998C23.2175 33.5998 20.1653 32.3355 17.9148 30.0851C15.6644 27.8346 14.4001 24.7824 14.4001 21.5998V11.9998C14.4001 11.3633 14.653 10.7528 15.103 10.3027C15.5531 9.85266 16.1636 9.5998 16.8001 9.5998H19.2001C19.8366 9.5998 20.4471 9.34695 20.8972 8.89686C21.3472 8.44677 21.6001 7.83632 21.6001 7.1998C21.6001 6.56328 21.3472 5.95284 20.8972 5.50275C20.4471 5.05266 19.8366 4.7998 19.2001 4.7998H16.8001C14.8905 4.7998 13.0592 5.55837 11.7089 6.90864C10.3587 8.2589 9.6001 10.0902 9.6001 11.9998V21.5998C9.60318 24.3112 10.2644 26.9813 11.5268 29.3808C12.7893 31.7803 14.6153 33.8375 16.8481 35.3758C18.9933 37.2671 20.733 39.5734 21.9622 42.1556C23.1914 44.7378 23.8847 47.5423 24.0001 50.3998C24.0001 54.8554 25.7701 59.1286 28.9207 62.2792C32.0713 65.4298 36.3445 67.1998 40.8001 67.1998C45.2557 67.1998 49.5289 65.4298 52.6795 62.2792C55.8301 59.1286 57.6001 54.8554 57.6001 50.3998V47.6638C59.8625 47.0797 61.8342 45.6905 63.1455 43.7566C64.4569 41.8227 65.018 39.477 64.7236 37.159C64.4292 34.841 63.2995 32.71 61.5463 31.1654C59.793 29.6208 57.5367 28.7686 55.2001 28.7686C52.8635 28.7686 50.6072 29.6208 48.8539 31.1654C47.1007 32.71 45.971 34.841 45.6766 37.159C45.3822 39.477 45.9433 41.8227 47.2547 43.7566C48.566 45.6905 50.5377 47.0797 52.8001 47.6638V50.3998C52.8001 53.5824 51.5358 56.6346 49.2854 58.8851C47.0349 61.1355 43.9827 62.3998 40.8001 62.3998C37.6175 62.3998 34.5653 61.1355 32.3148 58.8851C30.0644 56.6346 28.8001 53.5824 28.8001 50.3998C28.9216 47.5387 29.6223 44.7321 30.8599 42.1497C32.0975 39.5673 33.8461 37.2628 36.0001 35.3758C38.224 33.8322 40.0407 31.7726 41.2946 29.3734C42.5486 26.9743 43.2024 24.3069 43.2001 21.5998V11.9998C43.2001 10.0902 42.4415 8.2589 41.0913 6.90864C39.741 5.55837 37.9097 4.7998 36.0001 4.7998H33.6001C32.9636 4.7998 32.3531 5.05266 31.903 5.50275C31.453 5.95284 31.2001 6.56328 31.2001 7.1998C31.2001 7.83632 31.453 8.44677 31.903 8.89686C32.3531 9.34695 32.9636 9.5998 33.6001 9.5998H36.0001C36.6366 9.5998 37.2471 9.85266 37.6972 10.3027C38.1472 10.7528 38.4001 11.3633 38.4001 11.9998V21.5998C38.4001 23.1757 38.0897 24.7361 37.4867 26.192C36.8836 27.6479 35.9997 28.9708 34.8854 30.0851C33.7711 31.1994 32.4482 32.0833 30.9923 32.6864C29.5364 33.2894 27.976 33.5998 26.4001 33.5998V33.5998ZM55.2001 43.1998C53.9271 43.1998 52.7062 42.6941 51.806 41.7939C50.9058 40.8937 50.4001 39.6728 50.4001 38.3998C50.4001 37.1268 50.9058 35.9059 51.806 35.0057C52.7062 34.1055 53.9271 33.5998 55.2001 33.5998C56.4731 33.5998 57.694 34.1055 58.5942 35.0057C59.4944 35.9059 60.0001 37.1268 60.0001 38.3998C60.0001 39.6728 59.4944 40.8937 58.5942 41.7939C57.694 42.6941 56.4731 43.1998 55.2001 43.1998Z'
 										fill='black'
 									/>
-								</svg>
+								</svg> */}
 
 								<Card.Title className='title-name'>Doctor</Card.Title>
 								<Card.Subtitle className='profession-number'>
@@ -197,7 +196,7 @@ function Dashboard() {
 					<Col>
 						<Card className='profession-card'>
 							<Card.Body className='card-body'>
-								<div>
+								{/* <div>
 									<svg
 										width='68'
 										height='72'
@@ -215,7 +214,7 @@ function Dashboard() {
 											fill='black'
 										/>
 									</svg>
-								</div>
+								</div> */}
 								<Card.Title className='title-name'>Designer </Card.Title>
 								<Card.Subtitle className='profession-number'>
 									{designerCount}
@@ -228,7 +227,7 @@ function Dashboard() {
 					<Col>
 						<Card className='profession-card'>
 							<Card.Body className='card-body'>
-								<div>
+								{/* <div>
 									<svg
 										width='54'
 										height='72'
@@ -246,7 +245,7 @@ function Dashboard() {
 											fill='black'
 										/>
 									</svg>
-								</div>
+								</div> */}
 
 								<Card.Title className='title-name'>Politician </Card.Title>
 								<Card.Subtitle className='profession-number'>
@@ -258,7 +257,7 @@ function Dashboard() {
 					<Col>
 						<Card className='profession-card'>
 							<Card.Body className='card-body'>
-								<div>
+								{/* <div>
 									<svg
 										width='85'
 										height='72'
@@ -272,7 +271,7 @@ function Dashboard() {
 											fill='black'
 										/>
 									</svg>
-								</div>
+								</div> */}
 								<Card.Title className='title-name'> Student </Card.Title>
 								<Card.Subtitle className='profession-number'>
 									{studentCount}
@@ -283,7 +282,7 @@ function Dashboard() {
 					<Col>
 						<Card className='profession-card'>
 							<Card.Body className='card-body'>
-								<div>
+								{/* <div>
 									<svg
 										width='79'
 										height='72'
@@ -297,7 +296,7 @@ function Dashboard() {
 											fill='black'
 										/>
 									</svg>
-								</div>
+								</div> */}
 								<Card.Title className='title-name'> Businessmen </Card.Title>
 								<Card.Subtitle className='profession-number'>
 									{businessmanCount}

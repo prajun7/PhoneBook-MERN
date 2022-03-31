@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { UserContext } from '../../../contexts/UserContext';
 import { Link } from 'react-router-dom';
 import './UserEntry.css';
-import { Navbar, Nav, Form, Row, Col, Button } from 'react-bootstrap';
+import { Navbar, Form, Row, Col, Button } from 'react-bootstrap';
 const API_BASE = 'http://localhost:5000';
 
 function UserEntry() {
@@ -72,7 +72,7 @@ function UserEntry() {
       </h1> */}
 			<section>
 				<Navbar className='navbar'>
-					<nav>
+					{/* <nav>
 						<svg
 							className='logo'
 							width='76'
@@ -104,11 +104,13 @@ function UserEntry() {
 								fill='#3E1F92'
 							/>
 						</svg>
-					</nav>
+					</nav> */}
 
-					<Nav.Link className='top-header' href='/'>
-						Phonebook
-					</Nav.Link>
+					<nav>
+						<Link className='top-header' to='/'>
+							Phonebook
+						</Link>
+					</nav>
 				</Navbar>
 				<h1 className='heading'>User Entry</h1>
 			</section>
@@ -381,9 +383,9 @@ function UserEntry() {
 					<Button onClick={addContact} className='button1'>
 						Save
 					</Button>
-					<Nav.Link className='link' href='/searchcontact'>
+					<Link className='link' to='/searchcontact'>
 						SearchContact
-					</Nav.Link>
+					</Link>
 				</Form>
 				{/* <button onClick={addContact} className='button1'>
 						Save

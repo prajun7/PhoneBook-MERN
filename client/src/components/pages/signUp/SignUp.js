@@ -116,7 +116,7 @@ function SignUp() {
 		<>
 			<section>
 				<Navbar className='navbar-signup'>
-					<nav>
+					{/* <nav>
 						<svg
 							className='logo'
 							width='76'
@@ -148,10 +148,12 @@ function SignUp() {
 								fill='#3E1F92'
 							/>
 						</svg>
+					</nav> */}
+					<nav>
+						<Link className='top-header' to='/'>
+							Phonebook
+						</Link>
 					</nav>
-					<Nav.Link className='top-header' href='/'>
-						Phonebook
-					</Nav.Link>
 				</Navbar>
 			</section>
 			<Container fluid className='signup-box'>
@@ -160,7 +162,7 @@ function SignUp() {
 					<div>{error && <div className='error-message'>{error}</div>}</div>
 					<Form.Group className='form-group'>
 						<InputGroup>
-							<div className='inner-icon'>
+							{/* <div className='inner-icon'>
 								<svg
 									width='19'
 									height='20'
@@ -182,7 +184,7 @@ function SignUp() {
 										fill-opacity='0.7'
 									/>
 								</svg>
-							</div>
+							</div> */}
 							<Form.Control
 								className='input'
 								type='text'
@@ -195,7 +197,7 @@ function SignUp() {
 					</Form.Group>
 					<Form.Group className='form-group'>
 						<InputGroup>
-							<div className='inner-icon'>
+							{/* <div className='inner-icon'>
 								<svg
 									width='22'
 									height='18'
@@ -219,7 +221,7 @@ function SignUp() {
 										stroke-linejoin='round'
 									/>
 								</svg>
-							</div>
+							</div> */}
 							<Form.Control
 								className='input'
 								type='email'
@@ -232,7 +234,7 @@ function SignUp() {
 					</Form.Group>
 					<Form.Group className='form-group'>
 						<InputGroup>
-							<div className='inner-icon'>
+							{/* <div className='inner-icon'>
 								<svg
 									width='20'
 									height='22'
@@ -256,7 +258,7 @@ function SignUp() {
 										stroke-linejoin='round'
 									/>
 								</svg>
-							</div>
+							</div> */}
 							<Form.Control
 								className='input'
 								type='password'
@@ -273,7 +275,7 @@ function SignUp() {
 					</Form.Group>
 					<Form.Group className='bottom-group'>
 						<Form.Text>Already a Member?</Form.Text>
-						<Nav.Link href='/login'>Sign in</Nav.Link>
+						<Link to='/login'>Sign in</Link>
 					</Form.Group>
 				</Form>
 			</Container>

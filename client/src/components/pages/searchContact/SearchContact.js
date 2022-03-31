@@ -39,7 +39,7 @@ function SearchContact() {
 		<main>
 			<section>
 				<Navbar className='navbar'>
-					<nav>
+					{/* <nav>
 						<svg
 							className='logo'
 							width='76'
@@ -71,10 +71,12 @@ function SearchContact() {
 								fill='#3E1F92'
 							/>
 						</svg>
+					</nav> */}
+					<nav>
+						<Link className='top-header' to='/'>
+							Phonebook
+						</Link>
 					</nav>
-					<Nav.Link className='top-header' href='/'>
-						Phonebook
-					</Nav.Link>
 				</Navbar>
 				<h1 className='nav-title'>Search Contact</h1>
 			</section>
@@ -90,9 +92,7 @@ function SearchContact() {
 					</Form.Group>
 
 					<br />
-					<Button variant='success' onClick={findContact}>
-						Search
-					</Button>
+					<Button onClick={findContact}>Search</Button>
 				</Form>
 			</Container>
 			{/* <label>Name </label>
