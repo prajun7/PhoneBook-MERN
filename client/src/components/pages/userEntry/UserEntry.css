@@ -45,8 +45,8 @@
 	color: #000000;
 }
 .user-entry {
-	margin-top: 1px;
-	padding: 1px;
+	margin-top: 50px;
+	padding: 50px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -82,4 +82,28 @@
 
 	background: #e8eaeb !important;
 	border-radius: 12px;
+}
+
+.button1 {
+	position: relative;
+	width: 200px;
+	height: 60px;
+	left: 280px;
+	font-family: 'Roboto' !important;
+	font-style: normal;
+	font-weight: 700;
+	font-size: xx-large !important;
+	line-height: 70px;
+
+	color: #ffffff !important;
+	background: #3e1f92 !important;
+	border-radius: 15px;
+}
+
+.link {
+	position: relative;
+	font-size: xx-large;
+	border: 3px solid rgb(230, 230, 227);
+	background-color: #e8eaeb;
+	border-radius: 13px;
 }

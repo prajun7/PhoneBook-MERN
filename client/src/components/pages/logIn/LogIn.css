@@ -2,88 +2,131 @@
 	height: 110px;
 	background: none;
 }
-.main {
-	text-align: center;
-	justify-content: center;
+
+.signin-box {
 	display: flex;
-	padding: 90px 0 90px 0;
-	background-color: rgb(252, 252, 252);
+	justify-content: center;
+	align-items: center;
+	width: 572px;
+	height: 700px;
 }
 
-.sub-main {
-	display: flex;
-	justify-content: center;
-	height: 550px;
-	width: 35%;
-	box-shadow: 12px 12px 13px 12px rgb(207, 207, 207);
-	padding-top: 30px;
-	border-radius: 60px;
-	background-color: white;
+.header {
+	width: 550px;
+	height: 72px;
+	left: 500px;
+
+	font-family: 'Folio';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 60px;
+	line-height: 72px;
+	text-align: center;
+
+	color: #3e1f92;
 }
-.imgs {
-	padding-top: 20px;
-	justify-content: center;
+.form-field {
 	display: flex;
-}
-.container-image {
-	background-color: rgb(223, 221, 221);
-	border-radius: 150px;
-	align-items: center;
-	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	height: 115px;
-	width: 115px;
-}
-.profile {
-	height: 100px;
-	width: 100px;
-	border-radius: 130px;
+	margin-top: 50px;
+
+	background: #ffffff;
 }
 
 .input {
-	width: 300px;
-	height: 50px;
-	border-radius: 60px;
-	box-shadow: inset 0px 0px 25px 0px #888;
-	border: none;
-	outline: none;
-	background-color: #fff;
-	padding-left: 70px;
-	font-size: 20px;
-}
+	width: 546px;
+	height: 88px;
 
-.email {
-	height: 25px;
-	width: 25px;
+	background: #ffffff !important;
+	box-shadow: inset 0px 0px 4px rgba(200, 197, 197, 0.25);
+	border-radius: 6px;
+}
+/* .inner-layout {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	width: 546px;
+	height: 68px;
+	left: 0px;
+	top: 3px;
+	position: relative;
+
+	border-radius: 6px;
+} */
+.form-group {
+	margin-top: 10px;
+	padding: 15px;
+}
+.inner-icon {
 	position: absolute;
-	padding: 14px 0 0 25px;
+	left: 15px;
+	top: 15px;
+	z-index: 9999;
+}
+.button-group {
+	margin-bottom: 35px;
+	display: flex;
+	justify-content: center;
 }
 
-.name {
-	padding-left: 70px;
-	font-size: 20px;
+.forgot-password {
+	margin-top: 13px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 20px;
+	width: 400px !important;
+	height: 60px !important;
+	left: 50px !important;
+	background: #f4f6fa !important;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25) !important;
+	border-radius: 36px;
 }
-.second-input {
-	padding-top: 20px;
-}
-
-.button1 {
-	width: 380px;
-	height: 50px;
-	border-radius: 60px;
-	background-color: #b103fc;
-	color: white;
-	font-size: 25px;
-	border: none;
-}
-*/ .login-button {
-	padding-top: 25px;
-}
-
 .link {
-	font-size: 25px;
+	font-family: 'Roboto';
+	font-style: normal;
 	font-weight: 400;
+	font-size: 20px;
+	line-height: 23px;
+
+	color: #000000 !important;
 }
-a {
-	color: blue;
+
+.button2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+	padding: 24px 100px;
+
+	position: absolute;
+	width: 294px;
+	height: 78px;
+
+	background: #3e1f92 !important;
+	border-radius: 63px;
+}
+
+.bottom-group {
+	margin-top: 70px;
+	position: relative;
+	width: 250px;
+	height: 24px;
+	left: 150px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Folio';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 24px;
+	/* identical to box height */
+
+	color: #000000;
 }

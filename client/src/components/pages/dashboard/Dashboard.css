@@ -52,12 +52,22 @@
 }
 
 .buttons {
-	width: 160px;
-	height: 87px;
+	width: 180px;
+	height: 55px;
 	background: #ac3131 !important;
 	color: #ffffff !important;
+	display: flex;
+	flex-direction: space-between;
+	border-radius: 13px !important;
+}
+.links {
+	font-family: 'Exo 2';
+	font-style: normal;
+	font-weight: 100;
+	font-size: 18px;
+	line-height: 48px;
 
-	border-radius: 13px;
+	color: #ffffff !important;
 }
 
 .bottom-container {

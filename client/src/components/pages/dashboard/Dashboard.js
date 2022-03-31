@@ -133,13 +133,17 @@ function Dashboard() {
 			</section>
 			{/* button container */}
 			<Container fluid className='top-container'>
-				<Button className='buttons' variant='outline-secondary'>
-					<Nav.Link href='/userentry'>Add Contacts</Nav.Link>
-				</Button>
+				<Nav className='buttons'>
+					<Nav.Link className='links' href='/userentry'>
+						Add Contacts
+					</Nav.Link>
+				</Nav>
 
-				<Button className='buttons' variant='outline-secondary'>
-					<Nav.Link href='/searchcontact'>Search Contact</Nav.Link>
-				</Button>
+				<Nav className='buttons'>
+					<Nav.Link className='links' href='/searchcontact'>
+						Search Contact
+					</Nav.Link>
+				</Nav>
 			</Container>
 
 			<Container fluid className='bottom-container'>

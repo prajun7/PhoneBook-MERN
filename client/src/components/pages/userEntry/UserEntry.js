@@ -378,10 +378,12 @@ function UserEntry() {
 						</Col>
 					</Row>
 					<br />
-					<Button variant='success' onClick={addContact} className='button1'>
+					<Button onClick={addContact} className='button1'>
 						Save
 					</Button>
-					<Nav.Link href='/searchcontact'>SearchContact</Nav.Link>
+					<Nav.Link className='link' href='/searchcontact'>
+						SearchContact
+					</Nav.Link>
 				</Form>
 				{/* <button onClick={addContact} className='button1'>
 						Save

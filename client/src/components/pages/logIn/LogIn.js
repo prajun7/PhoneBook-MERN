@@ -11,9 +11,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { UserContext } from '../../../contexts/UserContext';
 import './LogIn.css';
-import profile from './image/a.png';
-import emailSign from './image/email.jpg';
-import pass from './image/pass.png';
+
 import {
 	Navbar,
 	Nav,
@@ -21,6 +19,7 @@ import {
 	Form,
 	Button,
 	InputGroup,
+	Card,
 } from 'react-bootstrap';
 
 // This will be the LogIn Page,
@@ -37,16 +36,6 @@ function LogIn() {
 
 	// Using context to get the setLoggedIn and setUser
 	const { setLoggedIn, setUser } = useContext(UserContext);
-
-	/*
-    This removes the underline and makes the text blue from the links
-    Used below in Forgot Password? and Need an Account?
-  */
-	const navStyle = {
-		color: 'blue',
-		textDecoration: 'none', // Removing the text-decoration(underline) from the links
-		// In Javascript while writing CSS we need to change text-decoration to textDecoration
-	};
 
 	/*
   Checks wheather the user credential is correct or not
@@ -102,7 +91,7 @@ function LogIn() {
 	};
 
 	return (
-		<>
+		<main>
 			<section>
 				<Navbar className='navbar-login'>
 					<nav>
@@ -144,12 +133,13 @@ function LogIn() {
 				</Navbar>
 			</section>
 			{/* signin section */}
-			<Container>
-				<Form>
-					<h1>Sigin in to Phonebook</h1>
-					<Form.Group>
+			<Container fluid className='signin-box'>
+				<Form className='form-field'>
+					<h1 className='header'>Sign in to Phonebook</h1>
+					<div>{error && <div className='error-message'>{error}</div>}</div>
+					<Form.Group className='form-group'>
 						<InputGroup>
-							<div>
+							<div className='inner-icon'>
 								<svg
 									width='22'
 									height='18'
@@ -174,14 +164,19 @@ function LogIn() {
 									/>
 								</svg>
 							</div>
-							<Form.Control type='email' placeholder='Email' />
+							<Form.Control
+								className='input'
+								type='email'
+								onChange={(e) => setEmail(e.target.value)}
+								placeholder='Email'
+							/>
 						</InputGroup>
 
 						{/* <Form.Control type='email' placeholder='Email'></Form.Control> */}
 					</Form.Group>
-					<Form.Group>
+					<Form.Group className='form-group'>
 						<InputGroup>
-							<div>
+							<div className='inner-icon'>
 								<svg
 									width='20'
 									height='22'
@@ -206,96 +201,33 @@ function LogIn() {
 									/>
 								</svg>
 							</div>
-							<Form.Control type='password' placeholder='Password' />
+							<Form.Control
+								className='input'
+								type='password'
+								onChange={(e) => setPassword(e.target.value)}
+								placeholder='Password'
+							/>
 						</InputGroup>
 					</Form.Group>
-					<Form.Group>
-						<Button>Forgot your Password?</Button>
+					<Form.Group className='button-group'>
+						<Nav className='forgot-password'>
+							<Nav.Link className='link' href='/forgotpassword'>
+								Forgot your Password?
+							</Nav.Link>
+						</Nav>
 					</Form.Group>
-					<Form.Group>
-						<Button>SIGN IN</Button>
+					<Form.Group className='button-group'>
+						<Button className='button2' onClick={handleSubmitLogIn}>
+							SIGN IN
+						</Button>
 					</Form.Group>
-					<Form.Group>
+					<Form.Group className='bottom-group'>
 						<Form.Text>New to Phonebook?</Form.Text>
-						<Nav.Link>Sign up</Nav.Link>
+						<Nav.Link href='/signup'>Sign up</Nav.Link>
 					</Form.Group>
 				</Form>
 			</Container>
-			<div className='main'>
-				{/* Start of the main div */}
-				<div className='sub-main'>
-					<div>
-						{/* <h1> 
-            <Link to='/' >
-              PHONEBOOK
-            </Link> 
-            </h1> */}
-						{error && <div className='error-message'>{error}</div>}
-						{/* { successMessage && <div className = "success-message">{successMessage}</div> } */}
-						{/* Only load this if error or successMessage is present */}
-						<div className='imgs'>
-							<div className='container-image'>
-								<img src={profile} alt='profile' className='profile' />
-							</div>
-						</div>
-
-						<h1>User Login</h1>
-
-						<div>
-							<img src={emailSign} alt='email' className='email' />
-							<input
-								type='email'
-								placeholder='Enter email'
-								required
-								className='input'
-								onChange={(e) => setEmail(e.target.value)}
-							/>
-						</div>
-
-						<div className='second-input'>
-							<img src={pass} alt='pass' className='email' />
-							<input
-								type='password'
-								placeholder='Enter Password'
-								required
-								className='input'
-								onChange={(e) => setPassword(e.target.value)}
-							/>
-						</div>
-
-						<div className='login-button'>
-							<button onClick={handleSubmitLogIn} className='button1'>
-								SIGN IN
-							</button>
-						</div>
-
-						{/* ** Forgot Password? ** */}
-						{/* <div className="fotgot-password-text">
-              <Link style={navStyle} to="/forgotpassword">
-                Forgot Password?
-              </Link>
-            </div> */}
-
-						{/* ** Need an Account? SignUp  ** */}
-						<div className='link'>
-							Need an Account?
-							<Link style={navStyle} to='/signup'>
-								SignUp
-							</Link>
-						</div>
-
-						{/* end of div className= login */}
-						{/* ** Need an Account? SignUp  ** */}
-						{/* <div className='need-account-text'>
-             Need an Account?  
-             <Link style = {navStyle} to = "/signup">
-             SignUp
-            </Link>
-            </div> */}
-					</div>
-				</div>
-			</div>
-		</> //End of the main div
+		</main> //End of the main div
 	);
 }
 
