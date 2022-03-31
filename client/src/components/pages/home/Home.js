@@ -59,7 +59,7 @@ function Home() {
 						Phonebook
 					</Nav.Link>
 				</Navbar>
-				<h1 className='nav-title'>Welcome to Phonebook</h1>
+				<h1 className='nav-title'>Homepage</h1>
 			</section>
 			{loggedIn ? (
 				//True
