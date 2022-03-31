@@ -1,0 +1,37 @@
+.main-div {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	background-size: cover;
+}
+
+.bottom {
+	margin-top: 300px;
+	width: 400px;
+	height: 200px;
+	background-color: rgb(228, 235, 241);
+	border: 1px solid rgb(240, 231, 231);
+	border-radius: 13px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar {
+	height: 110px;
+	background: linear-gradient(90.32deg, #3e1f92 0%, #fa949d 124.75%);
+}
+.top-header {
+	position: relative;
+	width: 207px;
+	height: 30px;
+
+	font-family: 'Exo 2';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 48px;
+
+	color: #fa949d !important;
+}

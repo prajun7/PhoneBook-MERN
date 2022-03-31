@@ -1,85 +1,174 @@
-.main{
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    padding: 90px 0 90px 0;
-    background-color: rgb(252, 252, 252);
+.main {
+	text-align: center;
+	justify-content: center;
+	display: flex;
+	padding: 90px 0 90px 0;
+	background-color: rgb(252, 252, 252);
 }
 
-.sub-main{
-    display: flex;
-    justify-content: center;
-    height: 550px;
-    width:35%;
-    box-shadow: 12px 12px 13px 12px rgb(207, 207, 207);
-    padding-top: 30px;
-    border-radius: 60px;
-    background-color: white;
+.sub-main {
+	display: flex;
+	justify-content: center;
+	height: 550px;
+	width: 35%;
+	box-shadow: 12px 12px 13px 12px rgb(207, 207, 207);
+	padding-top: 30px;
+	border-radius: 60px;
+	background-color: white;
 }
 .imgs {
-    padding-top: 20px;
-    justify-content: center;
-    display: flex;
-  }
+	padding-top: 20px;
+	justify-content: center;
+	display: flex;
+}
 .container-image {
-  background-color: rgb(223, 221, 221); 
-  border-radius: 150px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 115px;
-  width: 115px;
+	background-color: rgb(223, 221, 221);
+	border-radius: 150px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	height: 115px;
+	width: 115px;
 }
 .profile {
-  height: 100px;
-  width: 100px;
-  border-radius: 130px;
-} 
-
-.input{
-    width: 300px;
-    height: 50px;
-    border-radius: 60px; 
-    box-shadow: inset 0px 0px 25px 0px #888;
-    border: none;
-    outline: none;
-    background-color: #fff;
-    padding-left: 70px;
-    font-size: 20px
+	height: 100px;
+	width: 100px;
+	border-radius: 130px;
 }
 
-.email{
-    height: 25px;
-    width: 25px;
-    position: absolute;
-    padding: 14px 0 0 25px;
+.input {
+	width: 300px;
+	height: 50px;
+	border-radius: 60px;
+	box-shadow: inset 0px 0px 25px 0px #888;
+	border: none;
+	outline: none;
+	background-color: #fff;
+	padding-left: 70px;
+	font-size: 20px;
 }
 
-.name{
-    padding-left: 70px;
-    font-size: 20px;
-}
-.second-input{
-    padding-top: 20px;
-}
-
-.button1{
-    width: 380px;
-    height: 50px;
-    border-radius: 60px;
-    background-color: #b103fc;
-    color: white;
-    font-size: 25px;
-    border: none;
-} */
-.login-button{
-    padding-top: 25px;
+.email {
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	padding: 14px 0 0 25px;
 }
 
-.link{
-    font-size: 25px;
-    font-weight: 400;
+.name {
+	padding-left: 70px;
+	font-size: 20px;
 }
- a{
-     color: blue;
- }
+.second-input {
+	padding-top: 20px;
+}
+
+.button1 {
+	width: 380px;
+	height: 50px;
+	border-radius: 60px;
+	background-color: #b103fc;
+	color: white;
+	font-size: 25px;
+	border: none;
+}
+*/ .login-button {
+	padding-top: 25px;
+}
+
+.link {
+	font-size: 25px;
+	font-weight: 400;
+}
+a {
+	color: blue;
+}
+/* New style */
+.signin-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 572px;
+	height: 700px;
+}
+.form-field {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 50px;
+	border: none;
+	background: #ffffff;
+}
+.header {
+	width: 550px;
+	height: 72px;
+	left: 500px;
+
+	font-family: 'Folio';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 60px;
+	line-height: 72px;
+	text-align: center;
+
+	color: #3e1f92;
+}
+.input {
+	width: 546px;
+	height: 88px;
+
+	background: #ffffff;
+	box-shadow: inset 0px 0px 4px rgba(200, 197, 197, 0.25);
+	border-radius: 6px;
+}
+.form-group {
+	margin-top: 10px;
+	padding: 15px;
+}
+.forgot-password {
+	margin-top: 13px;
+	margin-left: 50px;
+	color: black;
+	padding: 12px 20px;
+	width: 400px;
+	height: 60px;
+
+	background: #f4f6fa;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+	border-radius: 36px;
+}
+.signin {
+	margin: 55px 0px 25px 95px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 24px 100px;
+	color: white;
+	position: absolute;
+	width: 294px;
+	height: 78px;
+
+	background: #3e1f92;
+	border-radius: 63px;
+}
+
+.bottom-group {
+	margin-top: 150px;
+	position: relative;
+	width: 250px;
+	height: 24px;
+	left: 150px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Folio';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 24px;
+	/* identical to box height */
+
+	color: #000000;
+}
