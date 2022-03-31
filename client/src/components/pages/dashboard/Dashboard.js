@@ -21,11 +21,6 @@ const API_BASE = 'http://localhost:5000';
     This removes the underline and makes the text blue from the links
     Used below in Forgot Password? and Need an Account?
   */
-const navStyle = {
-	color: 'blue',
-	textDecoration: 'none', // Removing the text-decoration(underline) from the links
-	// In Javascript while writing CSS we need to change text-decoration to textDecoration
-};
 
 function Dashboard() {
 	const { loggedIn, user } = useContext(UserContext);

@@ -12,11 +12,13 @@ function SearchContact() {
 	const [error, setError] = useState('');
 
 	const findContact = async () => {
+		console.log(user._id);
 		const data = await fetch(`${API_BASE}/search?name=${contactName}`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
+
 			body: JSON.stringify({
 				user_id: `${user._id}`,
 			}),
