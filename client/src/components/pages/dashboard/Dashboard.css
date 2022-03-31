@@ -13,3 +13,17 @@
 	line-height: 70px;
 	color: #000000;
 }
+.flashcard {
+	border: 1px solid rgb(54, 52, 48);
+	position: absolute;
+	width: 448px;
+	height: 290px;
+	left: 120px;
+	top: 320px;
+	background: #e6e6e6;
+	border-radius: 34px;
+}
+.dashboard-container {
+	display: flex;
+	flex-direction: row;
+}

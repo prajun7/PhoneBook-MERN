@@ -97,80 +97,67 @@ function Dashboard() {
 				</Navbar>
 			</nav>
 			<h1>Dashboard</h1>
-			<div id='bottom-container'>
-				<Container>
-					<Row>
-						<Col>
-							<Card>
-								<Card.Body className='flashcard'>
-									<h2>Teacher</h2>
-									<p>{teacherCount}</p>
-								</Card.Body>
-							</Card>
-						</Col>
-						<Col>
-							<Card>
-								<Card.Body className='flashcard'>
-									<h2>Doctor</h2>
-									<p>{doctorCount}</p>
-								</Card.Body>
-							</Card>
-						</Col>
-						<Col>
-							<Card>
-								<Card.Body>
-									<h2>Designer</h2>
-									<p>{designerCount}</p>
-								</Card.Body>
-							</Card>
-						</Col>
-					</Row>
-					<Row>
-						<Col>
-							<Card>
-								<Card.Body>
-									<h2>Politician</h2>
-									<p>{politicianCount}</p>
-								</Card.Body>
-							</Card>
-						</Col>
-						<Col>
-							<Card>
-								<Card.Body>
-									<h2>Student</h2>
-									<p>{studentCount}</p>
-								</Card.Body>
-							</Card>
-						</Col>
-						<Col>
-							<Card>
-								<Card.Body>
-									<h2>Businessman</h2>
-									<p>{businessmanCount}</p>
-								</Card.Body>
-							</Card>
-						</Col>
-					</Row>
-				</Container>
-			</div>
-			{/* <div>
-				<Nav.Link href='/userentry'>
-					<article>Add Contacts</article>
-				</Nav.Link>
-				<Nav.Link href='/searchcontact'>
-					<article>Search Contacts</article>
-				</Nav.Link>
-			</div> */}
+			<div className='bottom-container'>
+				<section>
+					<div className='dashboard-container'>
+						<Card className='flashcard'>
+							<Card.Body>
+								<h2>Teacher</h2>
+								<p>{teacherCount}</p>
+							</Card.Body>
+						</Card>
 
-			<div>
+						<Card className='flashcard'>
+							<Card.Body>
+								<h2>Doctor</h2>
+								<p>{doctorCount}</p>
+							</Card.Body>
+						</Card>
+
+						<Card>
+							<Card.Body>
+								<h2>Designer</h2>
+								<p>{designerCount}</p>
+							</Card.Body>
+						</Card>
+					</div>
+
+					<br />
+					<div>
+						<Card>
+							<Card.Body>
+								<h2>Politician</h2>
+								<p>{politicianCount}</p>
+							</Card.Body>
+						</Card>
+
+						<Card>
+							<Card.Body>
+								<h2>Student</h2>
+								<p>{studentCount}</p>
+							</Card.Body>
+						</Card>
+
+						<Card>
+							<Card.Body>
+								<h2>Businessman</h2>
+								<p>{businessmanCount}</p>
+							</Card.Body>
+						</Card>
+					</div>
+				</section>
+				<br />
+			</div>
+
+			<section className='dashboard-button'>
 				<Link style={navStyle} to='/userentry'>
-					Add Contacts
+					<button> Add Contacts</button>
 				</Link>
-			</div>
 
-			<div>
-				<Link to='/searchcontact'>Search Contact</Link>
-			</div>
+				<Link style={navStyle} to='/searchcontact'>
+					<button>Search Contact</button>
+				</Link>
+			</section>
 		</>
 	);
 }
