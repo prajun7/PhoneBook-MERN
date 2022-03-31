@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { Container, Nav, Navbar, Row, Col, Card } from 'react-bootstrap';
+import { Container, Navbar, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../contexts/UserContext';
-import phone from '../dashboard/phone.jpeg';
+import phone from '../home/phone.jpeg';
 import '../home/Home.css';
 // This will be the Home Page,
 // User will be able to SigUp and LogIn from this page, if they don't have an account
@@ -65,7 +65,7 @@ function Home() {
 						</Link>
 					</nav>
 				</Navbar>
-				<h1 className='nav-title'>Homepage</h1>
+				<h1 className='nav-title'>Welcome to Homepage</h1>
 			</section>
 			{loggedIn ? (
 				//True
