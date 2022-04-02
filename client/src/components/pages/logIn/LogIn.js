@@ -92,7 +92,7 @@ function LogIn() {
 		<main>
 			<section>
 				<Navbar className='navbar-login'>
-					<nav>
+					<nav className='nav-logo'>
 						<svg
 							className='logo'
 							width='76'
@@ -126,10 +126,7 @@ function LogIn() {
 						</svg>
 					</nav>
 					<nav>
-						<Link
-							style={{ textDecoration: 'none', marginLeft: '15px' }}
-							className='top-header'
-							to='/'>
+						<Link className='top-header' to='/'>
 							Phonebook
 						</Link>
 					</nav>

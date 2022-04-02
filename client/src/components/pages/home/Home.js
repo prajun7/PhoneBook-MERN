@@ -26,7 +26,7 @@ function Home() {
 		<main className='main-div' style={{ backgroundImage: `url(${phone})` }}>
 			<section>
 				<Navbar className='navbar'>
-					<nav>
+					<nav className='nav-logo'>
 						<svg
 							className='logo'
 							width='76'
@@ -60,10 +60,7 @@ function Home() {
 						</svg>
 					</nav>
 
-					<Link
-						style={{ textDecoration: 'none', marginLeft: '15px' }}
-						className='top-header'
-						to='/'>
+					<Link className='top-header' to='/'>
 						Phonebook
 					</Link>
 				</Navbar>

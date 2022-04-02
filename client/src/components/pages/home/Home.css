@@ -5,3 +5,18 @@
 	background-size: cover;
 	opacity: 0.8;
 }
+.nav-logo {
+	position: sticky;
+}
+.nav-logo .logo {
+	margin-top: 5px;
+}
+
+.nav-logo .call-icon {
+	margin-top: 0px;
+	margin-left: 10px;
+}
+.top-header {
+	text-decoration: none;
+	margin-left: 15px;
+}

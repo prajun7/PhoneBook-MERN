@@ -116,7 +116,7 @@ function SignUp() {
 		<>
 			<section>
 				<Navbar className='navbar-signup'>
-					<nav>
+					<nav className='nav-logo'>
 						<svg
 							className='logo'
 							width='76'
@@ -150,10 +150,7 @@ function SignUp() {
 						</svg>
 					</nav>
 					<nav>
-						<Link
-							style={{ textDecoration: 'none', marginLeft: '15px' }}
-							className='top-header'
-							to='/'>
+						<Link className='top-header' to='/'>
 							Phonebook
 						</Link>
 					</nav>

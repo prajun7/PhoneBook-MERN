@@ -39,7 +39,7 @@ function SearchContact() {
 		<main>
 			<section>
 				<Navbar className='navbar'>
-					<div>
+					<nav className='nav-logo'>
 						<svg
 							className='logo'
 							width='76'
@@ -71,10 +71,10 @@ function SearchContact() {
 								fill='#3E1F92'
 							/>
 						</svg>
-					</div>
+					</nav>
 					<nav>
 						<Link
-							style={{ textDecoration: 'none', marginLeft: '5px' }}
+							style={{ textDecoration: 'none', marginLeft: '15px' }}
 							className='top-header'
 							to='/'>
 							Phonebook

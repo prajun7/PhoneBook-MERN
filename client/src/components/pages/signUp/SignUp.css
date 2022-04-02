@@ -2,6 +2,17 @@
 	height: 110px;
 	background-color: none;
 }
+.nav-logo {
+	position: sticky;
+}
+.nav-logo .logo {
+	margin-top: 5px;
+}
+
+.nav-logo .call-icon {
+	margin-top: 0px;
+	margin-left: 10px;
+}
 
 .signup-box {
 	display: flex;
