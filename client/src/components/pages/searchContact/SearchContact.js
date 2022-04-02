@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from '../../../contexts/UserContext';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, Form, Button, Container, Card } from 'react-bootstrap';
+import { Navbar, Form, Button, Container, Card } from 'react-bootstrap';
 const API_BASE = 'http://localhost:5000';
 
 function SearchContact() {
@@ -39,7 +39,7 @@ function SearchContact() {
 		<main>
 			<section>
 				<Navbar className='navbar'>
-					{/* <nav>
+					<div>
 						<svg
 							className='logo'
 							width='76'
@@ -71,9 +71,12 @@ function SearchContact() {
 								fill='#3E1F92'
 							/>
 						</svg>
-					</nav> */}
+					</div>
 					<nav>
-						<Link className='top-header' to='/'>
+						<Link
+							style={{ textDecoration: 'none', marginLeft: '5px' }}
+							className='top-header'
+							to='/'>
 							Phonebook
 						</Link>
 					</nav>

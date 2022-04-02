@@ -44,21 +44,21 @@
 	margin: 1px;
 	padding: 1px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: space-between;
 	justify-content: flex-end;
-
 	width: auto;
 	height: auto;
 }
 
 .buttons {
-	width: 180px;
+	margin-left: 5px;
+	width: 170px;
 	height: 55px;
-	background: #ac3131 !important;
-	color: #ffffff !important;
+	background: #ac3131;
+	color: #ffffff;
 	display: flex;
 	flex-direction: space-between;
-	border-radius: 13px !important;
+	border-radius: 13px;
 }
 .links {
 	font-family: 'Exo 2';
@@ -66,8 +66,10 @@
 	font-weight: 100;
 	font-size: 18px;
 	line-height: 48px;
-
-	color: #ffffff !important;
+	margin-left: 20px;
+	text-decoration: none;
+	color: #ffffff;
+	text-align: center;
 }
 
 .bottom-container {

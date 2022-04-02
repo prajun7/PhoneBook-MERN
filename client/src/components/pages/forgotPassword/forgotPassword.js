@@ -7,7 +7,10 @@ function ForgotPassword() {
 		<div>
 			<Navbar className='navbar-signup'>
 				<nav>
-					<Link className='top-header' to='/'>
+					<Link
+						style={{ textDecoration: 'none', marginLeft: '15px' }}
+						className='top-header'
+						to='/'>
 						Phonebook
 					</Link>
 				</nav>

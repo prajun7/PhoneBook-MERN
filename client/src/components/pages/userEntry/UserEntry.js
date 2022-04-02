@@ -72,7 +72,7 @@ function UserEntry() {
       </h1> */}
 			<section>
 				<Navbar className='navbar'>
-					{/* <nav>
+					<nav>
 						<svg
 							className='logo'
 							width='76'
@@ -104,10 +104,13 @@ function UserEntry() {
 								fill='#3E1F92'
 							/>
 						</svg>
-					</nav> */}
+					</nav>
 
 					<nav>
-						<Link className='top-header' to='/'>
+						<Link
+							style={{ textDecoration: 'none', marginLeft: '15px' }}
+							className='top-header'
+							to='/'>
 							Phonebook
 						</Link>
 					</nav>

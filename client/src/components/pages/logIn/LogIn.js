@@ -92,7 +92,7 @@ function LogIn() {
 		<main>
 			<section>
 				<Navbar className='navbar-login'>
-					{/* <nav>
+					<nav>
 						<svg
 							className='logo'
 							width='76'
@@ -124,9 +124,12 @@ function LogIn() {
 								fill='#3E1F92'
 							/>
 						</svg>
-					</nav> */}
+					</nav>
 					<nav>
-						<Link className='top-header' to='/'>
+						<Link
+							style={{ textDecoration: 'none', marginLeft: '15px' }}
+							className='top-header'
+							to='/'>
 							Phonebook
 						</Link>
 					</nav>
@@ -211,7 +214,10 @@ function LogIn() {
 					</Form.Group>
 					<Form.Group className='button-group'>
 						<nav className='forgot-password'>
-							<Link className='link' to='/forgotpassword'>
+							<Link
+								style={{ 'text-decoration': 'none' }}
+								className='link'
+								to='/forgotpassword'>
 								Forgot your Password?
 							</Link>
 						</nav>
