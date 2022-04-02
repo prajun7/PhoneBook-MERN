@@ -89,21 +89,26 @@
 	width: 200px;
 	height: 60px;
 	left: 280px;
-	font-family: 'Roboto' !important;
+	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 700;
-	font-size: xx-large !important;
+	font-size: xx-large;
 	line-height: 70px;
-
-	color: #ffffff !important;
-	background: #3e1f92 !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+	background: #34197e;
 	border-radius: 15px;
 }
-
+.user-entry .button1:hover {
+	background: #857f98;
+}
 .link {
 	position: relative;
 	font-size: xx-large;
 	border: 3px solid rgb(230, 230, 227);
 	background-color: #e8eaeb;
 	border-radius: 13px;
+	text-decoration: none;
 }
