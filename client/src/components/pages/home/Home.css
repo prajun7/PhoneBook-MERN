@@ -19,3 +19,16 @@
 .navbar .top-header {
 	margin-left: 15px;
 }
+
+.bottom .nav-links {
+	background-color: rgb(208, 208, 208);
+	font-size: xx-large;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	border: 1px solid whitesmoke;
+	border-radius: 13px;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+}
