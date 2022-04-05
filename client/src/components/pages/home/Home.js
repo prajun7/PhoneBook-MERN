@@ -8,6 +8,7 @@ import '../home/Home.css';
 // User will be able to SigUp and LogIn from this page, if they don't have an account
 const navStyle = {
 	color: 'blue',
+	fontSize: 'xx-large',
 };
 function Home() {
 	// Getting user info from the context
@@ -61,10 +62,35 @@ function Home() {
 					<Link className='top-header' to='/'>
 						Phonebook
 					</Link>
+					{loggedIn ? (
+						<Container>
+							<Card>
+								<Link
+									to='/'
+									style={navStyle}
+									className='nav-links'
+									onClick={LoggOutButton}>
+									LogOut
+								</Link>
+							</Card>
+						</Container>
+					) : (
+						<nav className='right-side'>
+							<ul className='right-side-list'>
+								<button>
+									<Link to='/login'>LogIn</Link>
+								</button>
+
+								<button>
+									<Link to='/signup'>SignUp</Link>
+								</button>
+							</ul>
+						</nav>
+					)}
 				</Navbar>
-				<h1 className='nav-title'>Welcome to Homepage</h1>
+				<h1 className='homepage-title'>Welcome to Homepage</h1>
 			</section>
-			{loggedIn ? (
+			{/* {loggedIn ? (
 				//True
 				<Container>
 					<Card>
@@ -79,6 +105,7 @@ function Home() {
 				</Container>
 			) : (
 				//False
+
 				<Container className='bottom'>
 					<Row>
 						<Col>
@@ -93,7 +120,7 @@ function Home() {
 						</Col>
 					</Row>
 				</Container>
-			)}
+			)} */}
 		</main>
 	);
 }

@@ -7,6 +7,7 @@
 }
 .nav-logo {
 	position: sticky;
+	margin-left: 15px;
 }
 .nav-logo .logo {
 	margin-top: 5px;
@@ -19,7 +20,19 @@
 .navbar .top-header {
 	margin-left: 15px;
 }
-
+.homepage-title {
+	margin: 50px;
+	display: flex;
+	width: 100%;
+	height: 70vh;
+	justify-content: center;
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 60px;
+	line-height: 70px;
+	color: #000000;
+}
 .bottom .nav-links {
 	background-color: rgb(208, 208, 208);
 	font-size: xx-large;
@@ -28,7 +41,40 @@
 	border: 1px solid whitesmoke;
 	border-radius: 13px;
 	display: flex;
-
 	justify-content: center;
 	align-items: center;
+}
+
+.navbar .bottom {
+	display: flex;
+	flex-direction: row;
+	margin-left: 15px;
+}
+
+.right-side {
+	max-width: 300px;
+	margin-left: 1050px;
+	padding: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.right-side-list {
+	margin-left: 50px;
+	width: 160px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	list-style: none;
+	font-size: xx-large;
+	align-items: center;
+}
+.right-side-list button {
+	background-color: rgb(211, 203, 203);
+	margin: 15px;
+	padding: 5px;
+	border-radius: 1rem;
+}
+.right-side-list button:hover {
+	background-color: rgb(245, 232, 232);
 }

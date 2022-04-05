@@ -6,7 +6,7 @@ import LogIn from './components/pages/logIn/LogIn';
 import Dashboard from './components/pages/dashboard/Dashboard';
 import UserEntry from './components/pages/userEntry/UserEntry';
 import SearchContact from './components/pages/searchContact/SearchContact';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import UserContextProvider from './contexts/UserContext';
